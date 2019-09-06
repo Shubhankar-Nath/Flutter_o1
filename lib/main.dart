@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import './screens/home.dart';
 
 void main() {
-  runApp(
-    new HelloFlutterApp()
-  );
+  runApp(new HelloFlutterApp());
 }
 
 class HelloFlutterApp extends StatelessWidget {
@@ -11,14 +10,9 @@ class HelloFlutterApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Hello App",
-      home: new Material(
-        color: Colors.blue,
-        child: Center(
-          child: Text(
-            "Hello",
-            textDirection: TextDirection.ltr,
-          ),
-        ),
+      home: Scaffold(
+        appBar: AppBar(title: Text("Title Bar")),
+        body: Home()
       ),
     );
   }
